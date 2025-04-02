@@ -25,7 +25,7 @@ package object ManiobrasTrenes {
            val (paraPrincipal, quedaEnUno) = uno.splitAt(cantidadAMover)
            (principal ++ paraPrincipal, quedaEnUno, dos)
 
-       case Dos(n) => {
+       case Dos(n) => 
          if (n>0)
            val cantidadAMover = math.min(n, principal.length)
            val (quedaEnPrincipal, paraDos) = principal.splitAt(principal.length - cantidadAMover)
@@ -34,7 +34,7 @@ package object ManiobrasTrenes {
            val cantidadAMover = math.min(-n, dos.length)
            val (paraPrincipal, quedaEnDos) = dos.splitAt(cantidadAMover)
            (principal ++ paraPrincipal, uno, quedaEnDos)
-       }
+       
 
      }
   }
